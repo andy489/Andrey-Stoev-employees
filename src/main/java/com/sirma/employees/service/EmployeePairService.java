@@ -25,7 +25,7 @@ import java.util.Map;
 public class EmployeePairService {
     private static final Logger logger = LoggerFactory.getLogger(EmployeePairService.class);
 
-    private final dd .DateUtils dateUtils;
+    private final DateUtils dateUtils;
 
     public EmployeePairService(DateUtils dateUtils) {
         this.dateUtils = dateUtils;

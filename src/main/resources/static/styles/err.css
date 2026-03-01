@@ -1,0 +1,242 @@
+.error-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.error-card {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideIn 0.5s ease;
+}
+
+.error-header {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.error-header::before {
+    content: "⚠️";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 120px;
+    opacity: 0.2;
+    transform: rotate(20deg);
+}
+
+.error-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+    position: relative;
+    z-index: 1;
+}
+
+.error-header i {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.error-body {
+    padding: 30px;
+}
+
+.error-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #dc3545;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.error-metadata {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+}
+
+.error-metadata table {
+    width: 100%;
+}
+
+.error-metadata td {
+    padding: 5px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.error-metadata td:first-child {
+    font-weight: bold;
+    width: 120px;
+}
+
+.error-id {
+    background: #343a40;
+    color: #ffc107;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.suggestion-list {
+    list-style: none;
+    padding: 0;
+}
+
+.suggestion-list li {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #6c757d;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-list li:hover {
+    transform: translateX(5px);
+    background: #e9ecef;
+    border-left-color: #007bff;
+}
+
+.suggestion-list li::before {
+    content: "💡";
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.error-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.error-actions .btn {
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+    min-width: 150px;
+}
+
+.error-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.error-code {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.funny-message {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #dee2e6;
+}
+
+.stack-trace {
+    background: #2d2d2d;
+    color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.resource-path {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin: 10px 0;
+}
+
+.debug-info {
+    margin-top: 30px;
+    border-top: 2px dashed #dee2e6;
+    padding-top: 20px;
+}
+
+.debug-toggle {
+    cursor: pointer;
+    color: #007bff;
+    user-select: none;
+}
+
+.debug-toggle:hover {
+    text-decoration: underline;
+}
+
+.debug-content {
+    display: none;
+    margin-top: 15px;
+}
+
+.path-display {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    word-break: break-all;
+    margin: 15px 0;
+    border: 1px solid #dee2e6;
+}
+
+.url-encoded {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
