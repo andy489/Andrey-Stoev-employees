@@ -7,10 +7,15 @@ RUN mvn dependency:go-offline -B
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
+
+RUN groupadd -r spring -g 1000 && \
+    useradd -r -g spring -u 1000 spring && \
+    chown -R spring:spring /app
+USER spring:spring
 
 EXPOSE 8080
 
