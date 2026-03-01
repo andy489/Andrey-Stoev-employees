@@ -1,21 +1,236 @@
-.gradle
-**/build/
-!**/src/**/build/
+# Compiled Java class files
+*.class
 
-# Ignore Gradle GUI config
+# Gradle
+.gradle/
+build/
 gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+/gradlew
+/gradlew.bat
+/gradle/wrapper/gradle-wrapper.properties
 
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/tasks/
+/.idea/dictionaries/
+/.idea/shelf/
+/.idea/dataSources/
+/.idea/dataSources.ids
+/.idea/dataSources.local.xml
+/.idea/sqlDataSources.xml
+/.idea/dynamic.xml
+/.idea/uiDesigner.xml
 
-# Cache of project
+# VS Code
+.vscode/
+.settings/
+.classpath
+.project
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+*.prefs
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Logs
+logs/
+*.log
+*.trace
+
+# OS specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Application specific
+*.war
+*.ear
+*.jar
+*.zip
+*.tar
+*.tar.gz
+*.pid
+*.lock
+heapdump*.hprof
+
+# Gradle specific
+.gradle/
+build/
+!gradle-wrapper.jar
 .gradletasknamecache
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
+# Java specific
+hs_err_pid*
+replay_pid*
+
+# Test reports
+test-output/
+*.test
+*.results
+
+# IntelliJ specific - Out directories
+/out/
+/target/
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, from http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Environment
+.env
+*.env
+application-local.yml
+application-local.properties
+application-dev.yml
+application-dev.properties
+
+# Secrets
+secrets.*
+!**/src/main/**/secrets/
+**/secrets/**
+!**/src/test/**/secrets/
+
+# IDE-specific
+*.swp
+*.swo
+*~
+.#*
+#*#
+._*
+
+# Gradle build scans
+.gradle/
+build/
+
+# IntelliJ IDEA - More specific
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/misc.xml
+*.ipr
+*.iws
+.idea/**/tasks.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/vcs.xml
+.idea/**/.name
+.idea/**/workspace.xml
+
+# Intellij-Lombok
+lombok.config
+
+# Gradle
+bin/
+gen/
+build/
+.gradle/
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# Gradle's cache
+.gradle/
+build/
+
+# Gradle's log
+gradle.log
+
+# Mac OS X Finder
+.DS_Store
+
+# Mac OS X SMB
+._*
+
+# Mac OS X Time Machine
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Mac OS X User Interface
+.Icon?
+
+# Thumbnails
+._*
+.DS_Store
+Thumbs.db
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created by remote applications
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
