@@ -16,7 +16,7 @@ import java.time.format.DateTimeFormatter;
 @EnableScheduling
 public class EmployeesApplication {
 
-	private static final String SELF_URL = "https://your-app-name.onrender.com/health";
+	private static final String SELF_URL = "https://employees-pzl0.onrender.com/health";
 	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 	private final RestTemplate restTemplate = new RestTemplate();
 
