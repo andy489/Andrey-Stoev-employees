@@ -1,4 +1,7 @@
 spring:
+  config:
+    activate:
+      on-profile: production
   application:
     name: employees
   servlet:
@@ -6,6 +9,17 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
   thymeleaf:
-    cache: false
+    cache: true
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+  web:
+    resources:
+      add-mappings: true
+      static-locations: classpath:/static/
+  mvc:
+    static-path-pattern: /**
+
 server:
   port: 8080
